@@ -245,15 +245,16 @@ class JogoDoGalo
     public static function checkFirstMove($board) : int{
         
         $bp = -1;
-        $emptyCount = 0;
-        
-        for($i = 0; $i < 8; $i++){
-            if($board[$i] == ''){
-                $emptyCount++;
+        $emptyCount = -1;
+        $xIndex = 0;
+
+        for($i = 0; $i <= 8; $i++){
+            if($board[$i] == null){
+                $emptyCount ++;
+            }else{
+                $xIndex += $i;
             }
         }
-
-        $xIndex = array_search('X', $board);
         
         if($emptyCount == 7){
             if($board[4] == $board[$xIndex]){
