@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" type="imagex/png" href="https://cdn-icons-png.flaticon.com/512/2219/2219722.png">
 
-        <title>HFGames</title>
+        <title>Jogo do Galo</title>
         <style>
             body{
                 font-family: Helvetica, Arial, sans-serif;
@@ -40,12 +40,13 @@
         </style>
     </head>
     <body>
-        <h1>HFGames</h1>
+        <h1>Tic Tac Toe</h1>
         
         <div>
-            <a href="/tic-tac-toe"><button>Tic Tac Toe</button></a><br>
-            <a href="/rock-paper-scissors"><button>Rock Paper Scissors</button></a><br>
-            <a href="/hangman"><button id="last">Hangman</button></a>
+            <a href="/tic-tac-toe/pvp"><button>Player vs Player</button></a><br>
+            <a href="/tic-tac-toe/difficulty"><button>Player vs Bot</button></a><br>
+            <a href="/tic-tac-toe/htp"><button>How to play</button></a>
+            <a href="/"><button id="last">Games Menu</button></a>
         </div>
 
     </body>

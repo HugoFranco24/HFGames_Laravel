@@ -9,6 +9,7 @@
         <style>
             body{
                 font-family:'Segoe UI', Tahoma, sans-serif;
+                overflow-x: hidden; 
             }
             h1{
                 text-align: center;
@@ -16,12 +17,12 @@
                 font-weight: bold;
                 margin: 80px 0px 0px; 
             }
-            form{
+            form div{
                 width: 80%;
                 display: flex;
                 margin: 200px auto 0px;
             }
-            form button{
+            form div button{
                 width: 100%;
                 padding: 20px 0px;
                 font-size: 30px;
@@ -31,22 +32,42 @@
                 border-right: 2px solid black;
                 border-radius: none;
             }
-            form button:last-child{
+            form div button:nth-child(3){
                 border-right: 0px solid black;
             }
-            form button:hover{
+            form div button:hover{
                 background-color: hsl(0, 0%, 86%);
+            }
+            .against{
+                margin: 120px 25%;
+                font-size: 30px;
+            }
+            select{
+                height: 40px;
+                width: 50%;
+                font-size: 20px;
+                font-weight: 300;
             }
         </style>
     </head>
     <body>
-        <h1>Choose the Bot's Difficulty</h1>
+        <h1>Best of:</h1>
         
-        <form action="/pvb" method="POST">
+        <form action="/rock-paper-scissors/pvp" method="POST">
             @csrf
-            <button type="submit" name="difficulty" value="Easy">Easy</button>
-            <button type="submit" name="difficulty" value="Medium">Medium</button>
-            <button type="submit" name="difficulty" value="Hard">Hard</button>
+            <div>
+                <button type="submit" name="bestOf" value="1">Best of 1</button>
+                <button type="submit" name="bestOf" value="3">Best of 3</button>
+                <button type="submit" name="bestOf" value="5">Best of 5</button><br>
+            </div>
+
+            <div class="against">
+                <label>Against : </label>
+                <select name="against">
+                    <option value="player">Player</option>
+                    <option value="bot">Bot</option>
+                </select>
+            </div>
         </form>
 
     </body>

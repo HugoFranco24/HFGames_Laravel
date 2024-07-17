@@ -5,14 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" type="imagex/png" href="https://cdn-icons-png.flaticon.com/512/2219/2219722.png">
 
-        <title>HFGames</title>
+        <title>Rock Paper Scissors</title>
         <style>
             body{
                 font-family: Helvetica, Arial, sans-serif;
             }
             h1{
-                font-size: 120px;
+                font-size: 100px;
                 text-align: center;
+                margin-top: 120px;
             }
             div{
                 text-align: center;
@@ -40,12 +41,12 @@
         </style>
     </head>
     <body>
-        <h1>HFGames</h1>
+        <h1>Rock Paper Scissors</h1>
         
         <div>
-            <a href="/tic-tac-toe"><button>Tic Tac Toe</button></a><br>
-            <a href="/rock-paper-scissors"><button>Rock Paper Scissors</button></a><br>
-            <a href="/hangman"><button id="last">Hangman</button></a>
+            <a href="/rock-paper-scissors/best-of"><button>Play Rock Paper Scissors</button></a><br>
+            <a href="/tic-tac-toe/htp"><button>How to play</button></a>
+            <a href="/"><button id="last">Games Menu</button></a>
         </div>
 
     </body>

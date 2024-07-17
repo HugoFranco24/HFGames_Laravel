@@ -11,7 +11,7 @@
     </head>
     <body>
         <h1>Player vs Player</h1>
-        <a href="/" class="back"><i class="fas fa-arrow-left fa-lg"></i></a>
+        <a href="/tic-tac-toe" class="back"><i class="fas fa-arrow-left fa-lg"></i></a>
         
         <h2>{{ $player == true ? 'Player 1 turn' : 'Player 2 turn'}}</h2>
 
@@ -51,13 +51,13 @@
             <p>{{$score[1]}}</p>
             <h3>Player 2</h3>
 
-            <form action="/pvp" method="POST">
+            <form action="/tic-tac-toe/pvp" method="POST">
                 @csrf
                 <button type="submit">Reset Game</button>
             </form>
         </div>
 
-        <form class="jogoGalo" method="post" action="pvp">
+        <form class="jogoGalo" method="post" action="/tic-tac-toe/pvp">
             @csrf
             
             <input type="hidden" name="score1" value="{{$score[0]}}">

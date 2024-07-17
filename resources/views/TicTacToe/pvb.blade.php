@@ -11,7 +11,7 @@
     </head>
     <body>
         <h1>Player vs Bot</h1>
-        <a href="/" class="back"><i class="fas fa-arrow-left fa-lg"></i></a>
+        <a href="/tic-tac-toe" class="back"><i class="fas fa-arrow-left fa-lg"></i></a>
 
         <form action="{{ route('board.reset') }}" method="POST">
             @csrf
@@ -49,15 +49,15 @@
             <h3>VS</h3>
             <p>{{$score[1]}}</p>
             <h3>{{$difficulty}} Bot</h3>
-            <a href="/difficulty"><button>Change Difficulty</button></a><br>
-            <form action="/pvb" method="POST">
+            <a href="/tic-tac-toe/difficulty"><button>Change Difficulty</button></a><br>
+            <form action="/tic-tac-toe/pvb" method="POST">
                 @csrf
                 <input type="hidden" name="difficulty" value="{{$difficulty}}">
                 <button type="submit">Reset Game</button>
             </form>
         </div>
 
-        <form class="jogoGalo" method="post" action="/pvb">
+        <form class="jogoGalo" method="post" action="/tic-tac-toe/pvb">
             @csrf
             
             <input type="hidden" name="difficulty" value="{{$difficulty}}">

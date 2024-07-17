@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 use App\Services\JogoDoGalo;
+use App\Services\RockPaperScissors;
 
 class PagesController extends Controller{
 
-    public function pvp(){
+    /* START of TicTacToe PagesController*/
+    public function TTTpvp(){
 
         //input with default values
         $difficulty = request('difficulty');         
@@ -25,7 +27,7 @@ class PagesController extends Controller{
         }
 
         if($difficulty == null){
-            return view('pvp', [
+            return view('TicTacToe.pvp', [
                 'board' => $board,
                 'player' => $player,
                 'tp' => $tpp,
@@ -33,7 +35,7 @@ class PagesController extends Controller{
                 'score' => [$score1,$score2]
             ]);
         }else{
-            return view('pvb', [
+            return view('TicTacToe.pvb', [
                 'difficulty' => $difficulty,
                 'board' => $board,
                 'player' => $player,
@@ -44,7 +46,7 @@ class PagesController extends Controller{
         }
     }
 
-    public function boardReset(){        
+    public function TTTboardReset(){        
 
         $score1 = request('score1');
         $score2 = request('score2');
@@ -64,11 +66,76 @@ class PagesController extends Controller{
         }
     }
 
-    public function dificulty(){
-        return view('dificulty');
+    public function TTTdificulty(){
+        return view('TicTacToe.dificulty');
     }
 
-    public function htp(){
-        return view('how-to-play');
+    public function TTThtp(){
+        return view('TicTacToe.how-to-play');
     }
+    /* END of TicTacToe PagesController*/
+
+
+
+
+    /* START of RockPaperScissors PagesController*/
+    public function RPSpvp(){
+
+        //input with default values
+        $bestOf = request()->has('bestOf') ? request('bestOf') : abort(403);
+        $against = request()->has('against') ? request('against') : abort(403);  
+        $win = -1;
+        $score1 = request()->has('score1') ? request('score1') : 0;
+        $score2 = request()->has('score2') ? request('score2') : 0;
+
+        $hplay1 = request()->has('hplay1') ? request('hplay1') : null;
+        $hplay2 = request()->has('hplay2') ? request('hplay2') : null;
+        
+        $play1 = request()->has('play1') ? request('play1') : $hplay1;
+        $play2 = request()->has('play2') ? request('play2') : $hplay2;
+
+        if(request()->has('play1') or request()->has('play2')){
+            if($against == 'player'){
+                $win = RockPaperScissors::checkWin($play1, $play2, $score1, $score2);
+            }else{
+                $win = RockPaperScissors::playBot($play1, $play2, $score1, $score2);
+            }
+        }
+
+        return view('RockPaperSciss.pvp', [
+            'play1' => $play1,
+            'play2' => $play2,
+            'win' => $win,
+            'score' => [$score1,$score2],
+            'bestOf' => $bestOf,
+            'against' => $against
+        ]);
+    }
+
+
+    public function RPSboardReset(){
+        $score1 = request('score1');
+        $score2 = request('score2');
+        $bestOf = request()->has('bestOf') ? request('bestOf') : abort(403);
+        $against = request()->has('against') ? request('against') : abort(403);
+        
+        return redirect()->route('RPSpvp', [            
+            'score1' => $score1,
+            'score2' => $score2,
+            'bestOf' => $bestOf,
+            'against' => $against
+        ]);
+    }
+
+    public function bestOf(){
+        return view('RockPaperSciss.bestOf');
+    }
+    /* END of RockPaperScissors PagesController*/
+
+
+
+
+    /* START of Hangman PagesController*/
+
+    /* END of Hangman PagesController*/
 }

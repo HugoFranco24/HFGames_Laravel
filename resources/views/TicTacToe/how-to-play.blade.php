@@ -13,7 +13,7 @@
         
         <div class="text-center">
             <p class=" font-bold">I donti knowi</p>
-            <a href="/" class=" text-blue-500 text-decoration-none  hover:font-bold">go back -></a>
+            <a href="/tic-tac-toe" class=" text-blue-500 text-decoration-none  hover:font-bold">go back -></a>
         </div>
 
     </body>
