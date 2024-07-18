@@ -1,0 +1,152 @@
+body{
+    font-family:'Segoe UI', Tahoma, sans-serif;
+    margin: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.topmenu{
+    width: 100%;
+    height: 70px;
+    border-bottom: 2px solid black;
+}
+.topmenu h1{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+    padding-top: 10px;
+}
+.topmenu .back{
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    padding: 12px 14px;
+    background-color: white;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 1px 1px 5px #adadad;
+    text-decoration: none;
+    transition: 400ms;
+    cursor: pointer;
+}
+.topmenu .back i{
+    color: black;
+}
+.topmenu .back:hover{
+    background-color: #ececec;
+    box-shadow: 2px 4px 5px #adadad;
+}
+
+.game{
+    display: flex;
+    height: 90vh;
+    justify-content: space-between;
+}
+.guess{
+    width: 60%;
+}
+.word{
+    width: 50%;
+    height: 240px;
+    display: block;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 80px auto;
+}
+.tracos{
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+.traco{
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+    width: 30px;
+    margin: 0px 5px;
+    border-bottom: 4px solid black;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form label{
+    font-size: 26px;
+    font-weight: 500;
+}
+form input{
+    text-align: center;
+    width: 40px;
+    height: 34px;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0px 0px 0px 10px;
+}
+form button{
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    margin: 0px 0px 0px 10px;
+    cursor: pointer;
+}
+form button:hover{
+    background-color: hsl(0, 0%, 84%);
+}
+
+.info{
+    width: 80%;
+    height: 60px;
+    padding: 10px 10px;
+    display: block;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 60px auto 0px;
+}
+
+
+.hanging{
+    width: 38%;
+}
+.hanging img{
+    height: 74vh;
+    width: auto;
+    margin: 40px 0px;
+}
+
+
+.res{
+    position: absolute;
+    z-index: 5;
+    width: 500px;
+    height: 250px;
+    box-shadow: 0px 0px 20px #adadad;
+    background-color: white;
+    text-align: center;
+    width: 60%;
+    height: 90vh;
+}
+.res h1{
+    font-size: 100px;
+    margin-top: 40px;
+}
+.res p{
+    margin: 100px 0px;
+}
+.res a{
+    background-color: #ececec;
+    border-radius: 40px;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: black;
+    transition: 400ms;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 0px 4px #adadad;
+}
+.res a:hover{
+    background-color: hsl(0, 0%, 85%);
+}

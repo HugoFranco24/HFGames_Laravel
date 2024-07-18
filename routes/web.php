@@ -38,5 +38,10 @@ Route::post('/rock-paper-scissors/pvb', [PagesController::class, 'RPSpvp']);
 
 
 //Hangman views
-
+Route::get('/hangman', function () {
+    return view('Hangman.menu');
+});
+Route::get('/hangman/play', [PagesController::class, 'Hplay'])->name('Hplay');
+Route::post('/hangman/play', [PagesController::class, 'Hplay']);
+Route::get('/hangman/config', [PagesController::class, 'Hconfig'])->name('Hconfig');
 //end of Hangman views

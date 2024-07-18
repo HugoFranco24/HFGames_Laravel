@@ -1,6 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use Illuminate\Support\Str;
+use App\Services\Hangman;
 use App\Services\JogoDoGalo;
 use App\Services\RockPaperScissors;
 
@@ -136,6 +139,48 @@ class PagesController extends Controller{
 
 
     /* START of Hangman PagesController*/
+    public function Hplay(){
 
+        $word = request()->has('word') ? request('word') : abort(403);
+        $category = request()->has('category') ? request('category') : null;
+
+        $word = strtoupper($word);
+        $wordArr = str_split($word);
+                
+        $letter = request()->has('letter') ? request('letter') : null;
+        $letter = strtoupper($letter);
+
+        $wrongCnt = request()->has('wrongCnt') ? request('wrongCnt') : 0;
+        
+        // dd($word,$category, $letter, $wrongCnt, $wrongL);
+        $wrongLArr = [];
+        $guessedLArr = array_fill(0,count($wordArr),'');
+        
+        for($i = 0; $i < $wrongCnt; $i++){
+            $wrongLArr[$i] = request()->has('wrongLArray' . $i) ? request('wrongLArray' . $i) : '';
+        }
+        for($i = 0; $i < count($wordArr); $i++){
+            $guessedLArr[$i] = request()->has('guessedLArray' . $i) ? request('guessedLArray' . $i) : '';
+        }
+
+        $tries = request()->has('tries') ? request('tries') : 0;
+
+        if($letter != null){
+            Hangman::checkL($letter, $wordArr, $wrongCnt, $wrongLArr, $guessedLArr, $tries);
+        }
+
+        return view('Hangman.play', [
+            'wordIn' => $word,
+            'category' => $category,
+            'word' => $wordArr,
+            'wrongCnt' => $wrongCnt,
+            'guessedLArr' => $guessedLArr,
+            'wrongLArr' => $wrongLArr,
+            'tries' => $tries
+        ]);
+    }
+    public function Hconfig(){
+        return view('Hangman.config');
+    }
     /* END of Hangman PagesController*/
 }
