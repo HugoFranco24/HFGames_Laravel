@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="shortcut icon" type="imagex/png" href="https://img.icons8.com/fluency/96/000000/ps-controller.png">
-    <title>Tic Tac Toe | How to Play</title>
+    <title>Rock Paper Scissors | How to Play</title>
     <style>
         body{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -50,17 +50,17 @@
     </style>
 </head>
 <body>
-    <a href="/tic-tac-toe" class="back"><i class="fas fa-arrow-left fa-lg"></i></a>
-    <h1>How to Play Tic Tac Toe</h1>
+    <a href="/rock-paper-scissors" class="back"><i class="fas fa-arrow-left fa-lg"></i></a>
+    <h1>How to Play Rock Paper Scissors</h1>
 
     <h2>Game Description</h2>
-    <p>Tic Tac Toe is a simple and classic game played on a 3x3 grid. The game is also known as Noughts and Crosses. Two players take turns marking a space in the grid with their respective symbol (X or O), with the goal of being the first to get three of their symbols in a row, either horizontally, vertically, or diagonally.</p>
+    <p>Rock, Paper, Scissors is a simple hand game that is played by two people. It is often used as a decision-making tool or just for fun. The game is quick, easy to learn, and does not require any special equipment.</p>
     <hr>
     <h2>Objective</h2>
-    <p>The objective of Tic Tac Toe is to be the first player to form an unbroken line of three of their symbols (either X or O) in a horizontal, vertical, or diagonal direction on a 3x3 grid.</p>
+    <p>The objective of Rock, Paper, Scissors is to choose a hand symbol that defeats the symbol chosen by your opponent according to specific rules.</p>
     <hr>
     <h2>How to play</h2>
-    <p>If your playing alone, you can choose to play with a bot, it has easy, medium and hard difficulties. If you're playing with a friend, each one chooses in a turn like game.</p>
+    <p>If your playing alone, you can choose to play with a bot that chooses at random. If you're playing with a friend, each one chooses in a turn like game.</p>
     
 </body>
 </html>

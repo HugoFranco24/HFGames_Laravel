@@ -54,8 +54,8 @@
         <form action="/hangman/play" method="POST">
             @csrf
 
-            <input type="text" name="word" placeholder="Word to guess"><br>
-            <input type="text" name="category" placeholder="Category">
+            <input type="text" name="word" placeholder="Word to guess (max: 14)" maxlength="14"><br>
+            <input type="text" name="category" placeholder="Category (optional)">
 
             <button type="submit">Play</button>
         </form>

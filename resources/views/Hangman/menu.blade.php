@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" type="imagex/png" href="https://img.icons8.com/fluency/96/000000/ps-controller.png">
 
-        <title>Rock Paper Scissors</title>
+        <title>Hangman</title>
         <style>
             body{
                 font-family: Helvetica, Arial, sans-serif;
@@ -46,7 +46,7 @@
         <div>
             <a href="/hangman/config"><button>Create own word and play</button></a><br>
             <a href="/hangman/play"><button>Guess random word</button></a><br>
-            <a href="/tic-tac-toe/htp"><button>How to play</button></a>
+            <a href="/hangman/how-to-play"><button>How to play</button></a>
             <a href="/"><button id="last">Games Menu</button></a>
         </div>
 

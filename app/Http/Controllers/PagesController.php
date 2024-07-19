@@ -133,6 +133,10 @@ class PagesController extends Controller{
     public function bestOf(){
         return view('RockPaperSciss.bestOf');
     }
+
+    public function RPShtp(){
+        return view('RockPaperSciss.htp');
+    }
     /* END of RockPaperScissors PagesController*/
 
 
@@ -141,8 +145,35 @@ class PagesController extends Controller{
     /* START of Hangman PagesController*/
     public function Hplay(){
 
-        $word = request()->has('word') ? request('word') : abort(403);
         $category = request()->has('category') ? request('category') : null;
+        
+        $word = request()->has('word') ? request('word') : null;
+        if($word == null){
+            $randWords = [
+                'amizade',
+                'coragem',
+                'esperar',
+                'liberdade',
+                'sabedoria',
+                'respeito',
+                'honestidade',
+                'lealdade',
+                'paz',
+                'felicidade',
+                'portugal',
+                'simplicidade',
+                'tolerancia',
+                'generosidade',
+                'humildade',
+                'hugola',
+                'confiar',
+                'solidariedade',
+                'justo',
+                'bom',
+            ];
+            $rand = rand(0,19);
+            $word = $randWords[$rand];
+        }
 
         $word = strtoupper($word);
         $wordArr = str_split($word);
@@ -181,6 +212,10 @@ class PagesController extends Controller{
     }
     public function Hconfig(){
         return view('Hangman.config');
+    }
+    
+    public function Hhtp(){
+        return view('Hangman.htp');
     }
     /* END of Hangman PagesController*/
 }

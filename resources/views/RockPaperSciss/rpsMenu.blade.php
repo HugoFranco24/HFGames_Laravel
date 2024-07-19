@@ -45,7 +45,7 @@
         
         <div>
             <a href="/rock-paper-scissors/best-of"><button>Play Rock Paper Scissors</button></a><br>
-            <a href="/tic-tac-toe/htp"><button>How to play</button></a>
+            <a href="/rock-paper-scissors/how-to-play"><button>How to play</button></a>
             <a href="/"><button id="last">Games Menu</button></a>
         </div>
 

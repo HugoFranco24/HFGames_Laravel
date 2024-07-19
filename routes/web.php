@@ -34,6 +34,8 @@ Route::post('/rock-paper-scissors/board/reset', [PagesController::class, 'RPSboa
 
 Route::get('/rock-paper-scissors/pvb', [PagesController::class, 'RPSpvp'])->name('RPSpvb');
 Route::post('/rock-paper-scissors/pvb', [PagesController::class, 'RPSpvp']);
+
+Route::get('/rock-paper-scissors/how-to-play', [PagesController::class, 'RPShtp']);
 //end of RockPaperScissors views
 
 
@@ -44,4 +46,5 @@ Route::get('/hangman', function () {
 Route::get('/hangman/play', [PagesController::class, 'Hplay'])->name('Hplay');
 Route::post('/hangman/play', [PagesController::class, 'Hplay']);
 Route::get('/hangman/config', [PagesController::class, 'Hconfig'])->name('Hconfig');
+Route::get('/hangman/how-to-play', [PagesController::class, 'Hhtp']);
 //end of Hangman views
