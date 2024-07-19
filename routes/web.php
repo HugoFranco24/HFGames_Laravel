@@ -48,3 +48,5 @@ Route::post('/hangman/play', [PagesController::class, 'Hplay']);
 Route::get('/hangman/config', [PagesController::class, 'Hconfig'])->name('Hconfig');
 Route::get('/hangman/how-to-play', [PagesController::class, 'Hhtp']);
 //end of Hangman views
+
+//test
